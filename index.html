@@ -1,0 +1,302 @@
+<!doctype html>  
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>From Zero To Native App in 6 Seconds. Automated.</title>
+        <meta name="description" content="">
+        <meta name="author" content="Wren Reynolds Ed Sakabu Rose Rocchio">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/theme/default.css">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            // If the query includes 'print-pdf' we'll use the PDF print sheet
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+            
+                <section>
+                    <hgroup>
+                        <h2>From Zero To Native App in 6 Seconds. Automated.</h2>
+                        <h4>Grunt, Cordova, iOS, Android</h4>
+                    </hgroup>
+                    <footer>
+                        <h4 style="text-align:center">http://wrenr.github.io/cordova-build-automation-presentation</h4>
+                        <p>Wren Reynolds / <a href="mailto:wreynolds@oit.ucla.edu">wreynolds@oit.ucla.edu</a></p>
+                        <p>Ed Sakabu / <a href="mailto:edsakabu@oit.ucla.edu">edsakabu@oit.ucla.edu</a></p>
+                        <p>Rose Rocchio / <a href="mailto:rrocchio@oit.ucla.edu">rrocchio@oit.ucla.edu</a> / <a href="http://twitter.com/RoseRocchio" target="_blank">@RoseRocchio</a></p>
+                    </footer>
+                </section>
+                
+                <section>
+                    <h2>Overview</h2>
+                    <ol>
+                        <li class="fragment">Automation in Action</li>
+                        <li class="fragment">Workflows Roundup</li>
+                        <li class="fragment">Real World Build Automation - The Ultimate Example</li>
+                        <li class="fragment">Putting your Version control on a Diet</li>
+                    </ol>
+                </section>
+                
+                <section>
+                    <section>
+                        <div class="feature" style="margin-top: 180px;">
+                            <h2>Automation in Action</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Automation in Action</h2>
+                        <ul>
+                            <li class="fragment">The Code</li>
+                            <li class="fragment">The App</li>
+                            <li class="fragment">Learn: A -&gt; B</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="feature" style="margin-top: 180px;">
+                            <h2>Your Tools</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Automation is a Hammer, How to Spot Nails</h2>
+                        <ul>
+                            <li class="fragment">Tasks with:</li>
+                            <li class="fragment"><strong>Strict Sequence</strong></li>
+                            <li class="fragment"><strong>Configuration</strong></li>
+                            <li class="fragment"><strong>Repetition</strong></li>
+                            <li class="fragment"><strong>Mess Cleanup</strong></li>
+                            <li class="fragment good"><strong>SCRM</strong></li>
+                        </ul>                        
+                    </section>
+                    <section>
+                        <h2>Grunt - Javascript Task Runner</h2>
+                        <ul>
+                            <li class="fragment"><strong>Grunt: a task-based command line build tool for JavaScript projects.</strong></li>
+                            <li class="fragment">Setup: <a href="http://gruntjs.com/getting-started">http://gruntjs.com/getting-started</a></li>
+                            <li class="fragment">Quick Look: <a href="https://quickleft.com/blog/grunt-js-the-basics/">https://quickleft.com/blog/grunt-js-the-basics/</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Cordova - Hybrid App Framework</h2>
+                        <ul>
+                            <li class="fragment"><strong>Cordova - build cross-platform mobile applications in HTML, CSS and Javascript with device features</strong></li>
+                            <li class="fragment">Setup and Quick Look: <a href="http://wrenr.github.io/jsla-cordova-2015-08">http://wrenr.github.io/jsla-cordova-2015-08</a></li>
+                            <li class="fragment">MMWCon</li>
+                            <li class="fragment">Cordova - Your Backstage Pass to Mobile Device Hardware</a></li>
+                            <li class="fragment">Friday 3pm-5pm</a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="feature" style="margin-top: 180px;">
+                            <h2>Workflows Roundup</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>The 7,381 Second Workflow</h2>
+                        <ul>
+                            <li class="fragment">Why Mobile Builds Need Automation</li>
+                            <li class="fragment">Mobile build process requirements:</li>
+                            <li class="fragment bad">Every change requires a new build</li>
+                            <li class="fragment bad">dependencies need to be managed</li>
+                            <li class="fragment bad">Lots of files generated</li>
+                            <li class="fragment bad">Customizing builds for each platform (or deployment)</li>
+                            <li class="fragment">Sound familiar?</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>The 7,381 Second Workflow - Matchup</h2>
+                        <table>
+                            <tr>
+                            <td>
+                                <ul>
+                                    <li>Strict sequence</li>
+                                    <li>Configuration</li>
+                                    <li>Repetition</li>
+                                    <li>Mess clean-up</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Installing multiple plugins and libraries</li>
+                                    <li>Dependency hierarchy</li>
+                                    <li>Lots of Build files, plugin files, etc.</li>
+                                    <li>Customizing builds for each platform (or deployment)</li>
+                                </ul>
+                            </td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>The 7,381 Second Workflow - Answer Key</h2>
+                        <ul>
+                            <li class="fragment good">(Repetition) Installing Multiple Plugins and libraries</li>
+                            <li class="fragment good">(Strict sequence) Dependency hierarchy</li>
+                            <li class="fragment good">(Mess clean-up) Lots of Build files, plugin files, etc.</li>
+                            <li class="fragment good">(Configuration) Customizing builds for each platform (or deployment)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>The 6 Second Workflow</h2>
+                        <ul>
+                            <li class="fragment">Open Up Command Line</li>
+                            <li class="fragment">Enter A Command</li>
+                            <li class="fragment">Do everything in the 7,381 Second Workflow</li>
+                            <li class="fragment">But can you go <em>faster?</em></li>
+                            <li class="fragment">ZERO seconds</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>The ZERO Second Workflow</h2>
+                        <ul>
+                            <li class="fragment">&lt; 2 Seconds</li>
+                            <li class="fragment">= 0</li>
+                            <li class="fragment">Use the <strong>browser</strong> (when possible)</li>
+                            <li class="fragment">Test UI, non-native features</li>
+                            <li class="fragment">If possible, dummy native features</li>
+                        </ul>
+                    </section>
+                </section>
+
+
+
+                <section>
+                    <section>
+                        <div class="feature" style="margin-top: 180px;">
+                            <h2>Real World Build Automation - The Ultimate Example</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>The ohmageX Example</h2>
+                        <ul>
+                            <li>ohmageX: An open-source, mobile to web platform that records, analyzes, and visualizes data</li>
+                            <li>Available on App Store and Google Play: <strong>ohmageX</strong></li>
+                            <li>Try it out:<br />Server: https://test.mobilizingcs.org<br />username: demouser<br />password: thisisademo</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example: Strict Sequence</h2>
+                        <ul>
+                            <li class="fragment">Remove any previously generated files/directories</li>
+                            <li class="fragment">Then generate those directories</li>
+                            <li class="fragment">Create a Cordova Project</li>
+                            <li class="fragment">Add platforms, plugins to that Cordova project</li>
+
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example: Configuration</h2>
+                        <ul>
+                            <li class="fragment">Custom deployments</li>
+                            <li class="fragment">Bootstrap config data into Javascript</li>
+                            <li class="fragment">Templates</li>
+                            <li class="fragment">Icon and Splash Screen</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example: Repetition</h2>
+                        <ul>
+                            <li class="fragment">Adding multiple Cordova plugins</li>
+                            <li class="fragment">Adding all vendor Javascript libraries</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example: Mess Cleanup</h2>
+                        <ul>
+                            <li class="fragment">Removing generated files</li>
+                            <li class="fragment">Adding all vendor Javascript libraries</li>
+                            <li class="fragment">Hiding generated files from Git, which leads to...</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <div class="feature" style="margin-top: 180px;">
+                            <h2>Putting your Version control on a Diet</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Hide the Sweets</h2>
+                        <ul>
+                            <li class="fragment">compiled CSS</li>
+                            <li class="fragment">Any generated templates</li>
+                            <li class="fragment">JS Templates</li>
+                            <li class="fragment">Freshman 15 - compiled JS</li>
+                            <li class="fragment bad"><strong>Morbid Obesity</strong> - Node Modules</li>
+                            <li class="fragment bad"><strong>LAND MONSTER</strong> - Cordova directory</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h1>THANK YOU</h1>
+                    <h3>Any Questions?</h3>
+                    <p><br><a href="http://wrenr.github.io/cordova-build-automation-presentation/" target="_blank">wrenr.github.io/cordova-build-automation-presentation/</a></p>
+                    <br>
+                    <p>
+                        <small>
+                            <a href="https://github.com/wrenr" target="_blank">wrenr [GitHub]</a>
+                        </small>
+                    </p>
+                    <p>
+                        <small>
+                            <a href="https://twitter.com/wrenjs" target="_blank">wrenjs [Twitter]</a>
+                        </small>
+                    </p>
+                    <p>
+                        <small>
+                            wreynolds@oit.ucla.edu</a>
+                        </small>
+                    </p>
+                </section>
+            </div>
+
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
+            <!-- Presentation progress bar -->
+            <div class="progress"><span></span></div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+        <script>
+                // Full list of configuration options available here:
+                // https://github.com/hakimel/reveal.js#configuration
+                Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+                        // Optional libraries used to extend on reveal.js
+                        dependencies: [
+                                { src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+                                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                { src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                { src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                { src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                                { src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                        ]
+                });
+        </script>
+    </body>
+</html>
